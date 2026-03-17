@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: risk-analysis-api
+spec:
+  type: ClusterIP
+  selector:
+    app: risk-analysis-api
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8000
